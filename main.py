@@ -54,7 +54,7 @@ count = len(delay[(delay['Class'] == 1) & (delay['Airline'] == "WN")])
 print(count)
 # More no delays
 
-# Checking departure time and 
+# Checking departure time and airline
 plt.figure(figsize=(10,14))
 sns.boxplot(x="Airline", y="Time", data=delay)
 plt.title("Airline Departure Time")
