@@ -6,6 +6,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
 from sklearn.preprocessing import LabelEncoder
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import precision_score
 
 delay = pd.read_csv("airlines_delay.csv")
 
@@ -113,11 +115,8 @@ cm = confusion_matrix(y_test, pred)
 print(f"Confusion Matrix: {cm}")
 
 # Calculate accuracy and precision
-from sklearn.metrics import accuracy_score
-from sklearn.metrics import precision_score
 accuracy = accuracy_score(y_test, pred)
 print(f"Accuracy: {accuracy}")
-
 precision = precision_score(y_test, pred, average="weighted")
 print(f"Precision: {precision}")
 
